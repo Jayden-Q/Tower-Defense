@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Defense</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">    
+    <link rel="stylesheet" href="css/mainMenu.css">
+    <link rel="stylesheet" href="css/levelsMenu.css">
+    <link rel="stylesheet" href="css/shopMenu.css">
+    <link rel="stylesheet" href="css/gameScreen.css">
+    <link rel="stylesheet" href="css/pauseMenu.css">
+    <link rel="stylesheet" href="css/gameStateScreen.css">
+    <script src="./src/Models.js"></script>
+    <script src="./main.js" type="module" defer></script>
+    <script src="https://kit.fontawesome.com/1e17dd9d66.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="menu main-menu">
+        <h1 class="title">Tower Defense</h1>
+        <div class="menu-card-container">
+            <div class="menu-card leaderboard-card black-text">
+                <h2>Leaderboard</h2>
+                <div class="table-scroll">
+                    <table class="leaderboard-table">
+                        <tr><th>Player</th><th>Score</th></tr>
+                        <tr><td>Player 1</td><td>3,205,500</td></tr>
+                        <tr><td>Player 2</td><td>2,995,855</td></tr>
+                        <tr><td>Player 3</td><td>2,709,720</td></tr>
+                        <tr><td>Player 4</td><td>2,235,495</td></tr>
+                        <tr><td>Player 5</td><td>1,892,350</td></tr>
+                        <tr><td>Player 8</td><td>1,752,585</td></tr>
+                        <tr><td>Player 6</td><td>1,705,500</td></tr>
+                        <tr><td>Player 7</td><td>1,483,240</td></tr>
+                        <tr><td>Player 9</td><td>1,341,565</td></tr>
+                        <tr><td>Player 10</td><td>946,535</td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="menu-card main-buttons-card">
+                <div class="button" id="play-button">Play</div>
+                <div class="button" id="levels-button">Levels</div>
+            </div>
+            <div class="menu-card shop-card black-text">
+                <h2>Coins: 100</h2>
+                <div class="button" id="buy-coins-button">Buy Coins</div>
+                <div class="button" id="shop-button">Shop</div>
+            </div>
+        </div>
+    </div>
+    <div class="menu levels-menu hidden">
+        <h2 class="title">Levels</h2>
+        <div class="levels-container">
+            <div class="levels-list-container">
+                <div class="level-list">
+                    <div class="level" id="1">Level 1</div>
+                    <div class="level" id="2">Level 2</div>
+                    <div class="level" id="3">Level 3</div>
+                    <div class="level" id="4">Level 4</div>
+                    <div class="level" id="5">Level 5</div>
+                </div>
+                <div class="fa fa-solid fa-angles-left" id="back-button"></div>
+            </div>
+        </div>
+    </div>
+    <div class="menu shop-menu hidden">
+        <h2 class="title">Shop</h2>
+    </div>
+    <div class="menu loading-screen hidden">
+        <h2 class="title">Loading...</h2>
+    </div>
+    <div class="menu game-screen hidden">
+        <div class="game-ui">
+            <h2 class="wave-count">Wave: 0/10</h2>
+            <h2 class="money-count">$0</h2>
+            <div class="health">
+                <h2 class="health-count">100</h2>
+                <img src="./resources/UI/Heart.png">
+            </div>
+            <div class="settings-button fa fa-solid fa-gear"></div>
+            <p class="game-message"></p>
+            <div class="turrets-list">
+                <div class="turret-option" draggable="true">
+                    <img src="./resources/Models/StandardTurret/StandardTurretIcon.png" draggable="false">
+                    <p class="turret-cost">$20</p>
+                </div>
+                <div class="turret-option" draggable="true">
+                    <img src="./resources/Models/MissileLauncher/MissileLauncherIcon.png" draggable="false">
+                    <p class="turret-cost">$50</p>
+                </div>
+                <div class="turret-option" draggable="true">
+                    <img src="./resources/Models/LaserBeamer/LaserBeamerIcon.png" draggable="false">
+                    <p class="turret-cost">$100</p>
+                </div>
+            </div>
+        </div>
+        <div class="menu pause-menu hidden">
+            <div class="content">
+                <h2 class="title">Game Paused</h2>
+                <div class="buttons-container">
+                    <div class="button resume-button">Resume</div>
+                    <div class="button retry-button">Retry</div>
+                    <div class="button back-to-menu-button">Quit</div>
+                </div>
+            </div>
+        </div>
+        <div class="menu game-state-screen lose-screen hidden">
+            <h2 class="title">You Lose</h2>
+            <div class="buttons-container">
+                <div class="button retry-button">Retry</div>
+                <div class="button back-to-menu-button">Quit</div>
+            </div>
+        </div>
+        <div class="menu game-state-screen win-screen hidden">
+            <h2 class="title">You Win</h2>
+            <div class="buttons-container">
+                <div class="button retry-button">Retry</div>
+                <div class="button back-to-menu-button">Quit</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+.main-menu {
+    height: 100vh;
+}
+
+.menu-card h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.menu-card-container {
+    position: absolute;
+    top: 240px;
+    width: 100%;
+    text-align: center;
+    user-select: none;
+}
+
+.menu-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    padding: 15px 10px;
+    margin: 20px 7px;
+    background: #ddd;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.menu-card.leaderboard-card {
+    padding: 0 0 15px;
+}
+
+.menu-card.leaderboard-card h2 {
+    padding: 5px;
+    background: #C8C8C8;
+}
+
+.menu-card.shop-card h2 {
+    margin-bottom: 20px;
+}
+
+.table-scroll {
+    height: 175px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.leaderboard-table {
+    width: 100%;
+    padding: 0 15px;
+    border-collapse: collapse;
+}
+
+.leaderboard-table tr th {
+    border-bottom: 2px solid #000;
+}
+
+@media (max-width: 950px) {
+    .menu-card:nth-child(1) {
+        display: none;
+    }
+
+    .menu-card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 150px;
+    }
+
+    .menu-card {
+        display: block;
+    }
+}
